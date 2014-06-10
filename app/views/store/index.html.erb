@@ -4,9 +4,8 @@
 
 <h1><%= t('.title_html') %></h1>   <!-- <h1>Your Pragmatic Catalog</h1> Iteration J2 (Chapter 15.2, p. 218) -->
 
-<% cache ['store', Product.latest] do %>	<!-- Iteration C5: Caching of Partial Results (p. 105) -->
+<% cache do %>	<!-- Iteration C5: Caching of Partial Results (p. 105) -->
   <% @products.each do |product| %>
-  <% cache ['entry', product] do %>
     <div class="entry">
       <%= image_tag(product.image_url) %>
       <h3><%= product.title %></h3>
@@ -17,6 +16,5 @@
         <%= button_to t('.add_html'), line_items_path(product_id: product), remote: true %>
       </div>
       </div>
-    <% end %>
   <% end %>
 <% end %>
