@@ -22,6 +22,8 @@ git clone gitosis@git.ibr.cs.tu-bs.de:contiki.git
 
 ## Git configuration
 
+git config -e [--global]
+
 git config --global --list &nbsp;&nbsp;&nbsp; // Git configuration
 
 git config –-global alias.rb rebase &nbsp;&nbsp;&nbsp; // add aliases
